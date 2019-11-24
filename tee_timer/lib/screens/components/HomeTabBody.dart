@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:tee_timer/components/Tee.dart';
 
 
-class Body extends StatelessWidget {
+class HomeTabBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: RaisedButton(
-        child: Text("Hello"),
-      )
+      child: Tee()
     );
   }
 }
