@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tee_timer/models/brewModel.dart';
 import 'package:tee_timer/theme/style.dart';
 import 'package:tee_timer/screens/home.dart';
+import 'package:provider/provider.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,7 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: appTheme(),
-      home: HomeScreen()
+      home: ChangeNotifierProvider(
+          builder: (context) => BrewModel(),
+          child: HomeScreen()
+      ),
     );
   }
 }

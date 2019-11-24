@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:tee_timer/screens/components/body.dart';
+import 'package:tee_timer/screens/components/HomeTabBody.dart';
+
+import 'components/historyTabBody.dart';
+import 'components/timerTabBody.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -10,8 +13,8 @@ class HomeScreen extends StatelessWidget {
           appBar: AppBar(
             bottom: TabBar(
               tabs: [
-                Tab(icon: Icon(Icons.home)),
                 Tab(icon: Icon(Icons.list)),
+                Tab(icon: Icon(Icons.timer)),
                 Tab(icon: Icon(Icons.history)),
               ],
             ),
@@ -24,9 +27,9 @@ class HomeScreen extends StatelessWidget {
           ),
           body: TabBarView(
             children: [
-              Body(),
-              Icon(Icons.directions_transit),
-              Icon(Icons.directions_bike),
+              HomeTabBody(),
+              TimerTabBody(),
+              HistoryTabBody(),
             ],
           ),
         )
